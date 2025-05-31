@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Núcleo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      overflow: hidden;
+      background: #000;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      /* Black & white starry animated background */
+      background: url('https://i.pinimg.com/originals/06/83/e6/0683e6d7c78b3849b825ecaafa6d11b6.gif') no-repeat center center/cover;
+    }
+
+    .panel {
+      backdrop-filter: blur(15px);
+      background: rgba(0, 0, 0, 0.65);
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 3rem 2rem;
+      width: 90%;
+      max-width: 550px;
+      margin: 5% auto;
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
+      text-align: center;
+    }
+
+    .logo {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      filter: grayscale(100%);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-shadow: 0 0 10px black;
+      color: #eee;
+    }
+
+    button {
+      width: 100%;
+      padding: 1rem;
+      margin-top: 1rem;
+      border: 2px solid #eee;
+      border-radius: 10px;
+      background: #222;
+      color: #eee;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s, transform 0.2s;
+      box-shadow: 0 0 8px #ccc inset;
+    }
+
+    button:hover {
+      background: #eee;
+      color: #222;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #fff;
+    }
+
+    button:active {
+      transform: scale(0.98);
+      box-shadow: 0 0 6px #aaa inset;
+    }
+  </style>
+</head>
+<body>
+  <div class="panel">
+    <img
+      class="logo"
+      src="https://media.discordapp.net/attachments/1378104680403439646/1378248536663134298/Xynaptic-5-30-2025.png?ex=683be979&is=683a97f9&hm=4653a13a3e44b66206a861a942ef65d47e771e98530aea94ddd0b527dc4fd2e5&=&format=webp&quality=lossless"
+      alt="Núcleo Logo"
+    />
+    <button onclick="window.location.href='db.html'">Hash DB</button>
+    <button onclick="alert('Logging out...')">Log Out</button>
+  </div>
+</body>
+</html>
